@@ -11,7 +11,7 @@ export class CommentsComponent implements OnInit {
 
   constructor(private http: HttpClient) {
     this.http
-      .get<any>('https://jsonplaceholder.typicode.com/comments')
+      .get<any>('https://jsonplaceholder.typicode.com/comments?_limit=10')
       .subscribe(value => this.allComments = value);
   }
 

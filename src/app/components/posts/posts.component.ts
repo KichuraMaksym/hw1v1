@@ -11,7 +11,7 @@ export class PostsComponent implements OnInit {
 
   constructor(private http: HttpClient) {
     this.http
-      .get<any>('https://jsonplaceholder.typicode.com/posts')
+      .get<any>('https://jsonplaceholder.typicode.com/posts?_limit=10')
       .subscribe(value => this.allposts = value);
   }
 
